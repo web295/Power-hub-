@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cables - Power Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        .category {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .category h2 {
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .product img {
+            width: 100px;
+            height: auto;
+            margin-right: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .product h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .price {
+            color: #28a745;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+
+        .description {
+            margin: 0.5rem 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .toggle-desc {
+            background: none;
+            color: #007bff;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-decoration: underline;
+        }
+
+        .product a {
+            text-decoration: none;
+            color: #fff;
+            background: #007bff;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+
+        .product a:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Power Hub – Cables Section</h1>
+    </header>
+    <main>
+        <section id="cables" class="category">
+            <h2>Cables</h2>
+
+            <div class="product">
+                <img src="cable1.jpg" alt="3-in-1 Data Cable">
+                <div>
+                    <h3>3-in-1 Data USB Cable - Fast Charger</h3>
+                    <p class="price"><s>Rs.1600</s> Rs.327 PKR</p>
+                    <div class="description">
+                        <p class="short-desc">Compatible with iPhone, Android, Type C.</p>
+                        <p class="full-desc hidden">This versatile 3-in-1 data cable supports fast charging for multiple devices including Xiaomi, Huawei, Samsung, and iPad.</p>
+                        <button class="toggle-desc">Show More</button>
+                    </div>
+                    <a href="https://s.daraz.pk/s.baBLq?cc" target="_blank">Buy on Daraz</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="cable2.jpg" alt="OnePlus Cable">
+                <div>
+                    <h3>Oneplus 6A Warp Charge USB C Cable</h3>
+                    <p class="price"><s>Rs.799</s> Rs.315 PKR</p>
+                    <div class="description">
+                        <p class="short-desc">Original Dash Fast Charging for OnePlus devices.</p>
+                        <p class="full-desc hidden">Supports fast charging for OnePlus Nord, 9R, 8T, 7 Pro and more, with Type-C compatibility.</p>
+                        <button class="toggle-desc">Show More</button>
+                    </div>
+                    <a href="https://s.daraz.pk/s.baBpY?cc" target="_blank">Buy on Daraz</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="cable3.jpg" alt="Liquid Silicone Cable">
+                <div>
+                    <h3>120W Liquid Silicon Fast Charging Cable</h3>
+                    <p class="price"><s>Rs.399</s> Rs.209 PKR</p>
+                    <div class="description">
+                        <p class="short-desc">Silicone build, 6mm thick, for Android devices.</p>
+                        <p class="full-desc hidden">Fast-charging cable with Micro USB and Type-C, suitable for Samsung, Redmi, Oppo, Realme, and OnePlus phones.</p>
+                        <button class="toggle-desc">Show More</button>
+                    </div>
+                    <a href="https://s.daraz.pk/s.baBpf?cc" target="_blank">Buy on Daraz</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Affiliate Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.toggle-desc').forEach(button => {
+            button.addEventListener('click', () => {
+                const fullDesc = button.previousElementSibling;
+                if (fullDesc.classList.contains('hidden')) {
+                    fullDesc.classList.remove('hidden');
+                    button.textContent = 'Show Less';
+                } else {
+                    fullDesc.classList.add('hidden');
+                    button.textContent = 'Show More';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
